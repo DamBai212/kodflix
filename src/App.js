@@ -1,4 +1,11 @@
 import React, { Component } from 'react';
+import Lambs from './Lambs.jpg';
+import Tokyo from './Tokyo.jpg';
+import Seven from './Seven.png';
+import One   from './One.jpg'  ;
+import Titan from './Titan.jpg';
+import Magi  from './Magi.jpg'
+
 
 import './App.css';
 
@@ -17,15 +24,15 @@ class App extends Component {
          <div className="container">
            
            <div className="children">
-           Naruto
+           <img src={Tokyo}   alt="Tokyo" width="200" height="400" />
            </div>
          
            <div className="children">
-           One Piece
+           <img src={One}   alt="One" width="200" height="400" />
            </div>
 
             <div className="children">
-           Seven Deadly Sins
+            <img src={Seven}   alt="Seven" width="200" height="400" />
            </div>
          </div>
 
@@ -33,19 +40,19 @@ class App extends Component {
            
            <div className="children">
            
-           Tokyo Ghoul
+           <img src={Magi}   alt="Magi" width="200" height="400" />
            
            </div>
          
            <div className="children">
            
-           Magi
+           <img src={Titan}   alt="Titan" width="200" height="400" />
            
            </div>
 
             <div className="children">
            
-           My Hero Academia
+            <img src={Lambs}   alt="Lambs" width="200" height="400" />
            
            </div>
          </div>
