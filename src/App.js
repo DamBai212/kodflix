@@ -18,22 +18,25 @@ class App extends Component {
           <h1 className="App-title">Bold and Cold</h1>
           
         </header>
-        <p className="App-intro">
+        <div className="App-intro">
           
           
           
          <div className="container">
            
            <div className="children">
-           <img src={Tokyo}   alt="Tokyo" width="200" height="400" />
+           <img src={Tokyo}   alt="Tokyo" width="200" height="400" className="hover"/>
+           <p className="text">Tokyo Ghoul</p>
            </div>
          
            <div className="children">
-           <img src={One}   alt="One" width="200" height="400" />
+           <img src={One}   alt="One" width="200" height="400" className="hover"/>
+           <p className="text">One Piece</p>
            </div>
 
             <div className="children">
-            <img src={Seven}   alt="Seven" width="200" height="400" />
+            <img src={Seven}   alt="Seven" width="200" height="400" className="hover" />
+           <p className="text">Seven Deadly Sins</p>
            </div>
          </div>
 
@@ -41,25 +44,25 @@ class App extends Component {
            
            <div className="children">
            
-           <img src={Magi}   alt="Magi" width="200" height="400" />
-           
+           <img src={Magi}   alt="Magi" width="200" height="400" className="hover" />
+           <p className="text">Magi</p>
            </div>
          
            <div className="children">
            
-           <img src={Titan}   alt="Titan" width="200" height="400" />
-           
+           <img src={Titan}   alt="Titan" width="200" height="400" className="hover" />
+           <p className="text">Attack on Titan</p>
            </div>
 
             <div className="children">
            
-            <img src={Lambs}   alt="Lambs" width="200" height="400" />
-           
+            <img src={Lambs}   alt="Lambs" width="200" height="400" className="hover" />
+           <p className="text">The Silence of the Lambs</p>
            </div>
          </div>
 
 
-        </p>
+        </div>
       </div>
     );
   }

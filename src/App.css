@@ -1,6 +1,6 @@
 .App {
-
-  background-color: blue;
+color: #000;
+  background-color: black;
 }
 
 .container {
@@ -40,12 +40,24 @@ img {
 .App-title {
 
   text-align: center;
- 
+ color: aliceblue;
   
 }
 
 .App-header {
-
-  background: blue;
+  background: rgb(0, 0, 0);
 }
 
+.text{
+  position:relative;
+bottom:50px;
+left:0px;
+visibility:hidden;
+color: greenyellow;
+font-size: 100%;
+background-color: black;
+}
+
+.children:hover .text {
+  visibility:visible;
+  }
