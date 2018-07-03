@@ -25,18 +25,18 @@ class App extends Component {
          <div className="container">
            
            <div className="children">
-           <img src={Tokyo}   alt="Tokyo" width="200" height="400" className="hover"/>
-           <p className="text">Tokyo Ghoul</p>
+           <img src={Tokyo}   alt="Tokyo" width="200" height="400" />
+           <div className="overlay">Toyko Ghoul</div>
            </div>
          
            <div className="children">
-           <img src={One}   alt="One" width="200" height="400" className="hover"/>
-           <p className="text">One Piece</p>
+           <img src={One}   alt="One" width="200" height="400" />
+           <div className="overlay">One Piece</div>
            </div>
 
             <div className="children">
-            <img src={Seven}   alt="Seven" width="200" height="400" className="hover" />
-           <p className="text">Seven Deadly Sins</p>
+            <img src={Seven}   alt="Seven" width="200" height="400"  />
+           <div className="overlay">Seven Deadly Sins</div>
            </div>
          </div>
 
@@ -44,20 +44,20 @@ class App extends Component {
            
            <div className="children">
            
-           <img src={Magi}   alt="Magi" width="200" height="400" className="hover" />
-           <p className="text">Magi</p>
+           <img src={Magi}   alt="Magi" width="200" height="400"  />
+           <div className="overlay">Magi</div>
            </div>
          
            <div className="children">
            
-           <img src={Titan}   alt="Titan" width="200" height="400" className="hover" />
-           <p className="text">Attack on Titan</p>
+           <img src={Titan}   alt="Titan" width="200" height="400"  />
+           <div className="overlay">Attack on Titan</div>
            </div>
 
             <div className="children">
            
-            <img src={Lambs}   alt="Lambs" width="200" height="400" className="hover" />
-           <p className="text">The Silence of the Lambs</p>
+            <img src={Lambs}   alt="Lambs" width="200" height="400"  />
+           <div className="overlay">The Silence of the Lambs</div>
            </div>
          </div>
 
