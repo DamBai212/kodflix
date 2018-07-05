@@ -18,7 +18,7 @@ align-content: stretch;
 
 }
 
-.children {
+.Cover {
   flex:1;
   text-align:center;
   position: relative;
@@ -69,6 +69,13 @@ display: block;
     box-sizing: border-box;
   }
 
-  .children:hover .overlay {
+  .Cover:hover .overlay {
     opacity: 1;
+    
+  }
+
+
+  .Cover {
+    color: aliceblue;
+
   }
