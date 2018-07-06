@@ -1,11 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
+import {Link} from "react-router-dom";
+
 
 const Cover = (props) => {
-        return (
-            <div className="Cover">
-                <img src={props.image} alt={props.alt} width="200" height="400" />
+    return (
+        <div className="Cover">
+            <Link to={ props.title}>
+                <img src={props.image} alt={props.alt} />
                 <div className="overlay">{props.title}</div>
+             </Link>
             </div>
         )
     }

@@ -1,25 +1,22 @@
 import React, { Component } from 'react';
-import Lambs from './Lambs.jpg';
-import Tokyo from './Tokyo.jpg';
-import Seven from './Seven.png';
-import One from './One.jpg';
-import Titan from './Titan.jpg';
-import Magi from './Magi.jpg';
-import Cover from './Cover.js';
 import Gallery from './Gallery';
-
+import Details from './Details';
 import './App.css';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Bold and Cold</h1>
-        </header>
-        <div className="App-intro">
-          <Gallery/>
+      <Router>
+        <div>
+          <Switch>
+            <Route exact  path="/" component={Gallery} />
+            <Route path="/:Details" component={Details} />
+          </Switch>
         </div>
-      </div >
+      </Router>
+      </div>
     );
   }
 }

@@ -13,17 +13,23 @@ class Gallery extends Component {
     render() {
         return (
             <div>
-                <div className='container'>
-                    <Cover title='Seven' image={Seven} alt="Seven"/>
-                    <Cover title='Tokyo' image={Tokyo} alt="Tokyo"/>
-                    <Cover title='Titan' image={Titan} alt="Titan"/>
+                    <header className="App-header">
+                        <h1 className="App-title">Bold and Cold</h1>
+                    </header>
+                    <div className="App-intro">¸
+                        <div className='container'>
+                            <Cover title='Seven' image={Seven} alt="Seven" />
+                            <Cover title='Tokyo-Ghoul' image={Tokyo} alt="Tokyo-Ghoul" />
+                            <Cover title='Titan' image={Titan} alt="Titan" />
+                        </div>
+                        <div className='container'>
+                            <Cover title='Lambs' image={Lambs} alt="Lambs" />
+                            <Cover title='Magi' image={Magi} alt="Magi" />
+                            <Cover title='One' image={One} alt="One" />
+                        </div>
+                    </div >
                 </div>
-                <div className='container'>
-                    <Cover title='Lambs' image={Lambs} alt="Lambs"/>
-                    <Cover title='Magi' image={Magi} alt="Magi"/>
-                    <Cover title='One' image={One} alt="One"/>
-                </div>
-            </div >
+           
         );
     }
 }
