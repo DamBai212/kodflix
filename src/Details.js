@@ -1,41 +1,56 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { Link,Redirect } from "react-router-dom";
+import Animes from './Gallery-get.js';
 
 class Details extends Component {
 
     constructor(props) {
         super(props);
 
-        this.state = {
-            message: "Hello, this will be the details page for each Movie & TV show :)"
+        this.state = { 
+            NotFound: false,
+            Anime: {
+             
+            }
+
+
+
+            
         }
     }
- 
-    componentDidMount(){
-        this.getMessage();
+
+    componentDidMount() {
+const Anime = Animes.find(Anime=> Anime.id === this.props.match.params.id );
+this.setState({Anime:Anime });
+
     }
 
-  getMessage(){
-      setTimeout(()=>{
-        console.log("Our message is sent");
-        this.setState({
-            message: "Coming Soon!"
-        })
-    },3000)
-  }
-  
-
+   
 
     render() {
+
+
+if(this.state.Anime) {
         return (
             <div>
                 <h1 className="Title">Hello World,
-            {this.state.message}
+                    {this.state.Anime.title}
                 </h1>
-
                 <Link to="/">Gallery</Link>
+                <div>
+                    <h3>Title: {this.props.match.params.id}</h3>
+                
+                </div>
             </div>
-        );
+           );  
+         } else {
+             return <Redirect to='/not-found'/>
+         }
+       
     }
 }
+
+
+
+
 export default Details;

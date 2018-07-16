@@ -1,51 +1,57 @@
 
-import Lambs from './Lambs.jpg';
-import Tokyo from './Tokyo.jpg';
-import Seven from './Seven.png';
-import One from './One.jpg';
-import Titan from './Titan.jpg';
-import Magi from './Magi.jpg';
+import Lambs from './images/Lambs.jpg';
+import Tokyo from './images/Tokyo.jpg';
+import Seven from './images/Seven.png';
+import One from './images/One.jpg';
+import Titan from './images/Titan.jpg';
+import Magi from './images/Magi.jpg';
 
-const Anime = [
+const Animes = [
     {
-        title: 'Seven',
+        id: 'Seven',
         image: Seven,
-        alt: "Seven"
+        alt: "Seven",
+        title: 'Seven'
     },
 
     {
-        title: 'Tokyo-Ghoul',
+        id: 'Tokyo-Ghoul',
         image: Tokyo ,
-        alt: "Tokyo-Ghoul"
+        alt: "Tokyo-Ghoul",
+        title: "Tokyo Ghoul"
     },
 
     {
-        title: 'Titan',
+        id: 'Titan',
         image: Titan,
-        alt: "Titan"
+        alt: "Titan",
+        title: "Titan"
     },
 
 
     {
-        title: 'Lambs',
+        id: 'Lambs',
         image: Lambs,
-        alt: "Lambs"
+        alt: "Lambs",
+        title: "Lambs"
     },
 
 
     {
-        title: 'Magi',
+        id: 'Magi',
         image: Magi,
-        alt: "Magi"
+        alt: "Magi",
+        title: "Magi"        
     },
 
 
 
     {
-        title: 'One',
+        id: 'One',
         image: One,
-        alt: "One"
+        alt: "One",
+        title: "One"
     }
 ]
 
-export default Anime;
+export default Animes;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Cover from './Cover';
-import Anime from './Gallery-get.js';
+import Animes from './Gallery-get.js';
 
 class Gallery extends Component {
     render() {
@@ -10,10 +10,10 @@ class Gallery extends Component {
                 <header className="App-header">
                     <h1 className="App-title">Bold and Cold</h1>
                 </header>
-                <div className="App-intro">¸
+                <div className="App-intro">
                         <div className='container'>
-                       {Anime.map(function(Anime){
-                       return <Cover  title={Anime.title} image={Anime.image} key={Anime.alt} alt={Anime.alt}/>;
+                       {Animes.map(function(Anime){
+                       return <Cover id={Anime.id} title={Anime.title} image={Anime.image} key={Anime.alt} alt={Anime.alt}/>;
                        })}
                     </div>
                 </div >
