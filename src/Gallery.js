@@ -11,10 +11,10 @@ class Gallery extends Component {
                     <h1 className="App-title">Bold and Cold</h1>
                 </header>
                 <div className="App-intro">
-                        <div className='container'>
-                       {Animes.map(function(Anime){
-                       return <Cover id={Anime.id} title={Anime.title} image={Anime.image} key={Anime.alt} alt={Anime.alt}/>;
-                       })}
+                    <div className='container'>
+                        {Animes.map(function (Anime) {
+                            return <Cover id={Anime.id} title={Anime.title} image={Anime.image} synopsis={Anime.synopsis} key={Anime.alt} alt={Anime.alt} />;
+                        })}
                     </div>
                 </div >
             </div>
