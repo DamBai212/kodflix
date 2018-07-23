@@ -50,7 +50,7 @@ class Details extends Component {
 
                     </div>
                     <div>
-                        <h4>id:{this.props.match.params.id}</h4>
+                        <h4>id :{this.props.match.params.id}</h4>
                     </div>
 
                 </div>
