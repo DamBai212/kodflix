@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
+import Animes from './Gallery-get.js';
 
 class Details extends Component {
 
@@ -7,35 +8,62 @@ class Details extends Component {
         super(props);
 
         this.state = {
-            message: "Hello, this will be the details page for each Movie & TV show :)"
+            NotFound: false,
+            Anime: {
+            }
+
+
+
+
+
+
         }
     }
- 
-    componentDidMount(){
-        this.getMessage();
+
+    componentDidMount() {
+        const Anime = Animes.find(Anime => Anime.id === this.props.match.params.id);
+        this.setState({ Anime: Anime });
+
     }
 
-  getMessage(){
-      setTimeout(()=>{
-        console.log("Our message is sent");
-        this.setState({
-            message: "Coming Soon!"
-        })
-    },3000)
-  }
-  
 
 
     render() {
-        return (
-            <div>
-                <h1 className="Title">Hello World,
-            {this.state.message}
-                </h1>
 
-                <Link to="/">Gallery</Link>
-            </div>
-        );
+
+        if (this.state.Anime) {
+            return (
+                <div>
+                    <h1 className="Title">
+                        <center>{this.state.Anime.title}</center>
+                    </h1>
+                    <Link to="/">Gallery</Link>
+
+                    <div className="Container2">
+
+                        <h2 className="Synopsis">
+                            {this.state.Anime.synopsis}
+                        </h2>
+
+                        <img className="Anime-Images"
+                            src={this.state.Anime.image} alt="Anime.alt" width="60px" height="40px" />
+
+                    </div>
+                    <div>
+                        <h4>id :{this.props.match.params.id}</h4>
+                    </div>
+
+                </div>
+
+            );
+        } else {
+            return <Redirect to='/not-found' />
+        }
+
     }
 }
+
+
+
+
 export default Details;

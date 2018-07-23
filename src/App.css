@@ -1,5 +1,5 @@
 .App {
-color: #000;
+color: whitesmoke;
   background-color: black;
 }
 
@@ -78,4 +78,27 @@ display: block;
   .Title {
     color: aliceblue
   }
-  
+ 
+  .Container2 {
+    padding:10px 10px 15px 20px;
+    display: flex;
+    align-content: center;
+    background: black;
+  }
+
+  .Anime-Images{
+     width: 50%;
+     height: 50%;
+  }
+
+  .Synopsis{
+    align-content: center;
+
+  }
+
+  @media only screen and (max-width: 600px) {
+    body {
+       display: block;
+    }
+}
+
