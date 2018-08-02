@@ -4,6 +4,22 @@ import Cover from './Cover';
 import Animes from './Gallery-get.js';
 
 class Gallery extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+          Animes: []
+        };
+      }
+    
+      componentDidMount() {
+        fetch("/rest/animes")
+          .then(res => res.json())
+          .then(Animes => this.setState({ Animes }));
+      }
+
+
+
     render() {
         return (
             <div>

@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
 
-const getAnimes = require('./animes');
+const Animes = require('./animes');
 
-app.get('/rest/animes', (req, res) => res.send(getAnimes))
+app.get('/rest/animes', (req, res) => res.send(Animes))
 
-app.listen(3001, () => console.log('Example app listening on port 3001!'))
+app.listen(3002, () => console.log('Example app listening on port 3002!'))

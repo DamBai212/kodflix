@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './frontend/App';
-import registerServiceWorker from './src/frontend/registerServiceWorker';
+import registerServiceWorker from './frontend/registerServiceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
