@@ -16,7 +16,7 @@ const Animes = [
     },
 
     {
-        id: 'Tokyo-Ghoul',
+        id: 'Tokyo',
         image: Tokyo,
         alt: "Tokyo-Ghoul",
         title: "Tokyo Ghoul",

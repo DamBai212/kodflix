@@ -6,7 +6,7 @@ const Animes =[
         },
     
         {
-            id: 'Tokyo-Ghoul',
+            id: 'Tokyo',
             title: "Tokyo Ghoul",
             synopsis: "Tokyo is haunted by mysterious ghouls who are devouring humans. People are gripped by the fear of these ghouls whose identities are masked in mystery. An ordinary college student named Kaneki encounters Rize, a girl who is an avid reader like he is, at the café he frequents. Little does Kaneki realize that his fate will change overnight."
         },

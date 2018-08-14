@@ -7,9 +7,9 @@ const Cover = (props) => {
     return (
         <div className="Cover">
             <Link to={ props.id}>
-                <img src={props.image} alt={props.alt} />
+                <img src={require(`./images/${props.id}.jpg`)} alt={props.alt} key={props.id}  />
                 <div className="overlay">{props.title}</div>
-             </Link>
+              </Link>
             </div>
         )
     }

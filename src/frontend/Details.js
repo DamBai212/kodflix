@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from "react-router-dom";
-import Animes from './Gallery-get.js';
-
+import Loading from './Loading'
 class Details extends Component {
 
     constructor(props) {
@@ -9,20 +8,19 @@ class Details extends Component {
 
         this.state = {
             NotFound: false,
-            Anime: {
-            }
-
-
-
-
-
-
+            Anime: null
         }
     }
 
     componentDidMount() {
-        const Anime = Animes.find(Anime => Anime.id === this.props.match.params.id);
-        this.setState({ Anime: Anime });
+
+        fetch("/rest/animes")
+            .then(res => res.json())
+            .then(Animes => {
+                const Anime = Animes.find(Anime =>
+                    Anime.id === this.props.match.params.id);
+                this.setState({ Anime: Anime });
+            });
 
     }
 
@@ -30,23 +28,29 @@ class Details extends Component {
 
     render() {
 
+        let{ Anime } = this.state;
+
+        if (!Anime) {
+          return <Loading />
+        }
+
 
         if (this.state.Anime) {
             return (
                 <div>
                     <h1 className="Title">
-                        <center>{this.state.Anime.title}</center>
+                        <center>{Anime.title}</center>
                     </h1>
                     <Link to="/">Gallery</Link>
 
                     <div className="Container2">
 
                         <h2 className="Synopsis">
-                            {this.state.Anime.synopsis}
+                            {Anime.synopsis}
                         </h2>
 
                         <img className="Anime-Images"
-                            src={this.state.Anime.image} alt="Anime.alt" width="60px" height="40px" />
+                            src={require(`./images/${Anime.id}.jpg`)} alt="Anime.alt" width="60px" height="40px" />
 
                     </div>
                     <div>
