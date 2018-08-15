@@ -53,7 +53,7 @@ class Details extends Component {
                             src={require(`./images/${Anime.id}.jpg`)} alt="Anime.alt" width="60px" height="40px" />
 
                     </div>
-                    <div>
+                    <div className="ID">
                         <h4>id :{this.props.match.params.id}</h4>
                     </div>
 
