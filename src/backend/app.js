@@ -1,15 +1,23 @@
 const express = require('express');
 const app = express();
-const Animes = require('./animes');
 const path = require('path');
 const port = process.env.PORT || 3002;
+const connect = require('./db');
 
-app.get('/rest/animes', (req, res) => res.send(Animes))
+connect().then(dbo => { 
+app.get('/rest/animes', (req, res) => {
+    dbo.collection("animes").find({}).toArray(function(err, result) {
+    if (err) throw err;
+    console.log(result);
+    res.send(result)
+    })
+})
 
 app.use( express.static(path.join(__dirname, '../../build')))
 
 app.get('*', function (req, res) {
     res.sendFile(path.join(__dirname, '../../build', 'index.html'));
 });
+})
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
