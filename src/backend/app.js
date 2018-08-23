@@ -8,7 +8,7 @@ connect().then(dbo => {
 app.get('/rest/animes', (req, res) => {
     dbo.collection("animes").find({}).toArray(function(err, result) {
     if (err) throw err;
-    console.log(result);
+    
     res.send(result)
     })
 })
