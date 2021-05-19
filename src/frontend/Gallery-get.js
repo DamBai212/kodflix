@@ -54,6 +54,7 @@ const Animes = [
 
     {
         id: 'One',
+        
         image: One,
         alt: "One",
         title: "One",
